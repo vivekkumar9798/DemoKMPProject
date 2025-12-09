@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.ime
 import androidx.compose.foundation.layout.only
@@ -46,9 +47,11 @@ fun TechVivHome() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal))
+                .windowInsetsPadding(
+                    WindowInsets.safeDrawing
+                        .only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal)
+                )
                 .padding(horizontal = Dimens.padding16, vertical = Dimens.padding12)
-                .padding(bottom = Dimens.bottomNavHeight)
         ) {
             if (selectedNav == NavItem.Home) {
                 TopBar(onSettingsClick = { showSettings = true })
@@ -64,11 +67,17 @@ fun TechVivHome() {
             }
         }
 
-        BottomNav(
-            selectedNav = selectedNav,
-            onSelect = { selectedNav = it },
-            modifier = Modifier.align(Alignment.BottomCenter)
-        )
+        Box(
+            modifier = Modifier
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Bottom))
+                .align(Alignment.BottomCenter)
+        ) {
+            BottomNav(
+                selectedNav = selectedNav,
+                onSelect = { selectedNav = it },
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
         
         if (showSettings) {
             SettingsScreen(onBackClick = { showSettings = false })

@@ -6,10 +6,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.*
@@ -59,6 +60,7 @@ fun SearchScreen() {
         modifier = Modifier
             .fillMaxSize()
             .background(AppColors.whiteColor)
+            .windowInsetsPadding(WindowInsets.ime.only(WindowInsetsSides.Bottom))
     ) {
         // Search Bar
         Row(
@@ -141,30 +143,32 @@ fun SearchScreen() {
             }
         } else {
             // Show trending and browse all
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(Dimens.padding16)
+            val scrollState = rememberScrollState()
+            
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(scrollState)
+                    .padding(Dimens.padding16)
             ) {
                 // Trending Searches Section
-                item {
-                    AnimatedVisibility(
-                        visible = true,
-                        enter = fadeIn(animationSpec = tween(300)) + slideInVertically(
-                            initialOffsetY = { -it / 2 },
-                            animationSpec = tween(300, easing = FastOutSlowInEasing)
-                        )
-                    ) {
-                        Text(
-                            text = AppStrings.TRENDING_SEARCHES,
-                            style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onBackground,
-                            modifier = Modifier.padding(bottom = Dimens.padding12)
-                        )
-                    }
+                AnimatedVisibility(
+                    visible = true,
+                    enter = fadeIn(animationSpec = tween(300)) + slideInVertically(
+                        initialOffsetY = { -it / 2 },
+                        animationSpec = tween(300, easing = FastOutSlowInEasing)
+                    )
+                ) {
+                    Text(
+                        text = AppStrings.TRENDING_SEARCHES,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onBackground,
+                        modifier = Modifier.padding(bottom = Dimens.padding12)
+                    )
                 }
 
-                itemsIndexed(trendingSearches) { index, search ->
+                trendingSearches.forEachIndexed { index, search ->
                     AnimatedVisibility(
                         visible = true,
                         enter = fadeIn(
@@ -187,36 +191,32 @@ fun SearchScreen() {
                 }
 
                 // Browse All Section
-                item {
-                    Spacer(modifier = Modifier.height(Dimens.padding24))
-                    AnimatedVisibility(
-                        visible = true,
-                        enter = fadeIn(animationSpec = tween(300)) + slideInVertically(
-                            initialOffsetY = { -it / 2 },
-                            animationSpec = tween(300, easing = FastOutSlowInEasing)
-                        )
-                    ) {
-                        Text(
-                            text = AppStrings.BROWSE_ALL,
-                            style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onBackground,
-                            modifier = Modifier.padding(bottom = Dimens.padding12)
-                        )
-                    }
+                Spacer(modifier = Modifier.height(Dimens.padding24))
+                AnimatedVisibility(
+                    visible = true,
+                    enter = fadeIn(animationSpec = tween(300)) + slideInVertically(
+                        initialOffsetY = { -it / 2 },
+                        animationSpec = tween(300, easing = FastOutSlowInEasing)
+                    )
+                ) {
+                    Text(
+                        text = AppStrings.BROWSE_ALL,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onBackground,
+                        modifier = Modifier.padding(bottom = Dimens.padding12)
+                    )
                 }
 
-                item {
-                    LazyVerticalGrid(
-                        columns = GridCells.Fixed(2),
-                        horizontalArrangement = Arrangement.spacedBy(Dimens.spacing12),
-                        verticalArrangement = Arrangement.spacedBy(Dimens.spacing12),
-                        modifier = Modifier.height((browseCategories.size / 2 * Dimens.size100)),
-                        userScrollEnabled = false
-                    ) {
-                        items(browseCategories) { category ->
-                            BrowseCategoryCard(category)
-                        }
+                LazyVerticalGrid(
+                    columns = GridCells.Fixed(2),
+                    horizontalArrangement = Arrangement.spacedBy(Dimens.spacing12),
+                    verticalArrangement = Arrangement.spacedBy(Dimens.spacing12),
+                    modifier = Modifier.height((browseCategories.size / 2 * Dimens.size100)),
+                    userScrollEnabled = false
+                ) {
+                    items(browseCategories) { category ->
+                        BrowseCategoryCard(category)
                     }
                 }
             }

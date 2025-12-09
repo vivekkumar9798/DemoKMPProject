@@ -66,7 +66,7 @@ fun LibraryScreen() {
             modifier = Modifier
                 .fillMaxWidth()
                 .background(MaterialTheme.colorScheme.surface)
-                .padding(16.dp)
+                .padding(start = 16.dp, end = 16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),

@@ -27,7 +27,6 @@ import com.demokmp.ui.home.model.NavItem
 
 @Composable
 fun BottomNav(selectedNav: NavItem, onSelect: (NavItem) -> Unit, modifier: Modifier = Modifier) {
-    Divider(color = AppColors.surfaceVariant)
     Row(
         modifier = modifier
             .fillMaxWidth()
