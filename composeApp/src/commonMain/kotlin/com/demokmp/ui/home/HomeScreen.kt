@@ -21,6 +21,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.demokmp.AppColors
 import com.demokmp.Dimens
 import com.demokmp.ui.home.components.BottomNav
 import com.demokmp.ui.home.components.TopBar
@@ -29,16 +30,18 @@ import com.demokmp.ui.home.content.HomeContent
 import com.demokmp.ui.home.content.LibraryScreen
 import com.demokmp.ui.home.content.ProScreen
 import com.demokmp.ui.home.content.SearchScreen
+import com.demokmp.ui.home.content.SettingsScreen
 import com.demokmp.ui.home.model.NavItem
 
 @Composable
 fun TechVivHome() {
     var selectedNav by remember { mutableStateOf(NavItem.Home) }
+    var showSettings by remember { mutableStateOf(false) }
     
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
+            .background(AppColors.whiteColor)
     ) {
         Column(
             modifier = Modifier
@@ -48,7 +51,7 @@ fun TechVivHome() {
                 .padding(bottom = Dimens.bottomNavHeight)
         ) {
             if (selectedNav == NavItem.Home) {
-                TopBar()
+                TopBar(onSettingsClick = { showSettings = true })
                 Spacer(Modifier.height(Dimens.padding12))
                 Spacer(Modifier.height(Dimens.padding16))
             }
@@ -66,6 +69,10 @@ fun TechVivHome() {
             onSelect = { selectedNav = it },
             modifier = Modifier.align(Alignment.BottomCenter)
         )
+        
+        if (showSettings) {
+            SettingsScreen(onBackClick = { showSettings = false })
+        }
     }
 }
 

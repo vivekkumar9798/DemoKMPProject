@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.demokmp.AppColors
 import com.demokmp.AppStrings
 import com.demokmp.ui.home.models.Song
 import com.demokmp.ui.home.models.Playlist
@@ -63,7 +64,7 @@ fun ForYouScreen() {
         state = listState,
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background),
+            .background(AppColors.whiteColor),
         contentPadding = PaddingValues(bottom = 80.dp)
     ) {
         // Header

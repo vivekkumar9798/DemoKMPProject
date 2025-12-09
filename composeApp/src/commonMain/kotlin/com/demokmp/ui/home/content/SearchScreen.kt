@@ -58,7 +58,7 @@ fun SearchScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
+            .background(AppColors.whiteColor)
     ) {
         // Search Bar
         Row(

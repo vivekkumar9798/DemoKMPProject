@@ -41,6 +41,7 @@ object AppColors {
     val categoryRed = Color(0xFFF44336)
     val categoryCyan = Color(0xFF00BCD4)
     val categoryDeepOrange = Color(0xFFFF5722)
+    val whiteColor = Color(0xFFFFFFFF)
 }
 
 object AppStrings {

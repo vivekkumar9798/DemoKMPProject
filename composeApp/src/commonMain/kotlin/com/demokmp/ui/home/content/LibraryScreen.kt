@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.demokmp.AppColors
 import com.demokmp.AppStrings
 import com.demokmp.ui.home.models.LibraryItem
 import com.demokmp.ui.home.models.RecentSong
@@ -58,7 +59,7 @@ fun LibraryScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
+            .background(AppColors.whiteColor)
     ) {
         // Header
         Box(
@@ -78,16 +79,6 @@ fun LibraryScreen() {
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onBackground
                 )
-                Box(
-                    modifier = Modifier
-                        .size(40.dp)
-                        .clip(CircleShape)
-                        .background(MaterialTheme.colorScheme.primaryContainer)
-                        .clickable { },
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(text = "⚙️", fontSize = 20.sp)
-                }
             }
         }
 

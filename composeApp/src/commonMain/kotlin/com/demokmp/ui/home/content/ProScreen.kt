@@ -21,6 +21,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.demokmp.AppColors
 import com.demokmp.AppStrings
 import com.demokmp.ui.home.models.ProPlan
 import com.demokmp.ui.home.models.ProFeature
@@ -50,7 +51,7 @@ fun ProScreen() {
         state = listState,
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background),
+            .background(AppColors.whiteColor),
         contentPadding = PaddingValues(bottom = 80.dp)
     ) {
         // Hero Section with Gradient

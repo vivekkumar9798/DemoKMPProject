@@ -1,6 +1,7 @@
 package com.demokmp
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -13,7 +14,9 @@ import com.demokmp.ui.home.TechVivHome
 @Preview
 fun App() {
     TechVivTheme {
-        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+        Surface(modifier = Modifier.fillMaxSize().systemBarsPadding(),
+            color = AppColors.whiteColor,
+        ) {
             TechVivHome()
         }
     }

@@ -18,6 +18,7 @@ fun TechVivTheme(content: @Composable () -> Unit) {
         onBackground = Color(0xFF1A1D1F),
         surface = Color.White,
         onSurface = Color(0xFF1A1D1F)
+
     )
 
     MaterialTheme(colorScheme = colors, content = content)
