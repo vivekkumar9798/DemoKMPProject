@@ -2,17 +2,14 @@
 
 🎵 A modern, cross-platform music streaming application built with Kotlin Multiplatform and Compose Multiplatform. Stream your favorite songs, create playlists, and discover new music - all in one place.
 
-## � Screenshots
+## 📸 Screenshot
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
-  <img src="https://file+.vscode-resource.vscode-cdn.net/Users/jai/Desktop/KMP/DemoKMPProject/screenshot_1.png" alt="Home Screen" width="200"/>
-  <img src="https://file+.vscode-resource.vscode-cdn.net/Users/jai/Desktop/KMP/DemoKMPProject/screenshot_2.png" alt="Search Screen" width="200"/>
-  <img src="https://file+.vscode-resource.vscode-cdn.net/Users/jai/Desktop/KMP/DemoKMPProject/screenshot_3.png" alt="Player Screen" width="200"/>
-  <img src="https://file+.vscode-resource.vscode-cdn.net/Users/jai/Desktop/KMP/DemoKMPProject/screenshot_4.png" alt="Playlist View" width="200"/>
-  <img src="https://file+.vscode-resource.vscode-cdn.net/Users/jai/Desktop/KMP/DemoKMPProject/screenshot_5.png" alt="Settings" width="200"/>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0160.PNG" alt="TechViv Music App Screenshot" width="300"/>
+  <p><em>TechViv Music App - Home Screen</em></p>
 </div>
 
-## �🚀 Features
+## � Features
 
 - **Cross-Platform**: Single codebase for Android, iOS, Desktop, and Web
 - **Modern UI**: Built with Jetpack Compose and Material 3 design
