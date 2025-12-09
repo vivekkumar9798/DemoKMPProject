@@ -1,47 +1,69 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop (JVM), Server.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0160.PNG" alt="TechViv Music App" width="300"/>
+  
+  # TechViv Music App 🎵
+  
+  [![Kotlin](https://img.shields.io/badge/Kotlin-Multiplatform-7F52FF?logo=kotlin)](https://kotlinlang.org/)
+  [![Compose](https://img.shields.io/badge/Compose-Multiplatform-4285F4?logo=jetpack-compose)](https://www.jetbrains.com/lp/compose-multiplatform/)
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  
+  A modern, cross-platform music streaming application built with Kotlin Multiplatform and Compose Multiplatform. 
+  Stream your favorite songs, create playlists, and discover new music - all in one place.
+</div>
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+## ✨ Features
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+- 🎧 **Cross-Platform** - Single codebase for Android, iOS, Desktop, and Web
+- 🎨 **Modern UI** - Built with Jetpack Compose and Material 3 design
+- 📱 **Responsive Design** - Optimized for all screen sizes and devices
+- 🌙 **Dark/Light Theme** - Choose your preferred theme
+- 🔍 **Smart Search** - Find your favorite tracks instantly
+- 🎶 **High-Quality Audio** - Enjoy crystal clear sound quality
+- 📱 **Offline Mode** - Listen without an internet connection
+- 🔄 **Sync Across Devices** - Seamless experience across all your devices
 
-* [/server](./server/src/main/kotlin) is for the Ktor server application.
+## 🚀 Tech Stack
 
-* [/shared](./shared/src) is for the code that will be shared between all targets in the project.
-  The most important subfolder is [commonMain](./shared/src/commonMain/kotlin). If preferred, you
-  can add code to the platform-specific folders here too.
+- **UI**: Compose Multiplatform
+- **Backend**: Ktor Server
+- **Networking**: Ktor Client
+- **Dependency Injection**: Koin
+- **Build System**: Gradle with Kotlin DSL
+- **Multiplatform**: Kotlin Multiplatform Mobile (KMM)
 
-### Build and Run Android Application
+## 📱 Supported Platforms
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+| Platform | Version |
+|----------|---------|
+| Android  | 8.0+ (API 26+) |
+| iOS      | 14.0+ |
+| Desktop  | Windows, macOS, Linux |
+| Web      | Modern Browsers (WASM & JS) |
 
-### Build and Run Desktop (JVM) Application
+## 🏗️ Project Structure
 
-To build and run the development version of the desktop app, use the run configuration from the run widget
-in your IDE’s toolbar or run it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:run
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:run
+```
+.
+├── composeApp/          # Shared Compose Multiplatform code
+│   ├── src/
+│   │   ├── commonMain/  # Shared Kotlin code for all platforms
+│   │   ├── androidMain/ # Android-specific code
+│   │   ├── iosMain/     # iOS-specific code
+│   │   └── jvmMain/     # Desktop (JVM) specific code
+│   └── build.gradle.kts # Compose app configuration
+│
+├── iosApp/              # iOS application entry point
+│   └── iosApp/          # Xcode project and SwiftUI code
+│
+├── server/              # Ktor backend server
+│   └── src/main/kotlin/
+│
+├── shared/              # Shared business logic
+│   └── src/commonMain/  # Platform-agnostic business logic
+│
+├── build.gradle.kts     # Root project configuration
+└── settings.gradle.kts  # Project structure definition
+```
   ```
 
 ### Build and Run Server
@@ -57,39 +79,47 @@ in your IDE’s toolbar or run it directly from the terminal:
   .\gradlew.bat :server:run
   ```
 
-### Build and Run Web Application
+## 🧪 Testing
 
-To build and run the development version of the web app, use the run configuration from the run widget
-in your IDE's toolbar or run it directly from the terminal:
-- for the Wasm target (faster, modern browsers):
-  - on macOS/Linux
-    ```shell
-    ./gradlew :composeApp:wasmJsBrowserDevelopmentRun
-    ```
-  - on Windows
-    ```shell
-    .\gradlew.bat :composeApp:wasmJsBrowserDevelopmentRun
-    ```
-- for the JS target (slower, supports older browsers):
-  - on macOS/Linux
-    ```shell
-    ./gradlew :composeApp:jsBrowserDevelopmentRun
-    ```
-  - on Windows
-    ```shell
-    .\gradlew.bat :composeApp:jsBrowserDevelopmentRun
-    ```
+Run all tests:
+```bash
+./gradlew test
+```
 
-### Build and Run iOS Application
+## 🤝 Contributing
 
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+We love contributions! Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with ❤️ using Kotlin Multiplatform
+- Powered by [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
+- Icons by [Material Design Icons](https://material.io/resources/icons/)
+- Special thanks to the Kotlin and Compose Multiplatform communities
+
+## 📱 Show Your Support
+
+Give a ⭐️ if this project helped you!
+
+## 📬 Contact
+
+- [GitHub Profile](https://github.com/vivekkumar9798)
+- [Report an Issue](https://github.com/vivekkumar9798/DemoKMPProject/issues)
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
-
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [YouTrack](https://youtrack.jetbrains.com/newIssue?project=CMP).
+<div align="center">
+  Made with ❤️ by Vivek Kumar
+</div>
