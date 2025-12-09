@@ -1,18 +1,34 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0160.PNG" alt="TechViv Music App" width="300"/>
-   <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0161.PNG" alt="TechViv Music App" width="300"/>
-    <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0162.PNG" alt="TechViv Music App" width="300"/>
-     <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0163.PNG" alt="TechViv Music App" width="300"/>
-      <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0164.PNG" alt="TechViv Music App" width="300"/>
-  
-  # TechViv Music App 🎵
-  
-  [![Kotlin](https://img.shields.io/badge/Kotlin-Multiplatform-7F52FF?logo=kotlin)](https://kotlinlang.org/)
-  [![Compose](https://img.shields.io/badge/Compose-Multiplatform-4285F4?logo=jetpack-compose)](https://www.jetbrains.com/lp/compose-multiplatform/)
-  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-  
-  A modern, cross-platform music streaming application built with Kotlin Multiplatform and Compose Multiplatform. 
-  Stream your favorite songs, create playlists, and discover new music - all in one place.
+# TechViv Music App 🎵
+
+[![Kotlin](https://img.shields.io/badge/Kotlin-Multiplatform-7F52FF?logo=kotlin)](https://kotlinlang.org/)
+[![Compose](https://img.shields.io/badge/Compose-Multiplatform-4285F4?logo=jetpack-compose)](https://www.jetbrains.com/lp/compose-multiplatform/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+A modern, cross-platform music streaming application built with Kotlin Multiplatform and Compose Multiplatform. 
+Stream your favorite songs, create playlists, and discover new music - all in one place.
+
+## ✨ Features
+
+- 🎧 **Cross-Platform** - Single codebase for Android, iOS, Desktop, and Web
+- 🎨 **Modern UI** - Built with Jetpack Compose and Material 3 design
+- 📱 **Responsive Design** - Optimized for all screen sizes and devices
+- 🌙 **Dark/Light Theme** - Choose your preferred theme
+- 🔍 **Smart Search** - Find your favorite tracks instantly
+- 🎶 **High-Quality Audio** - Enjoy crystal clear sound quality
+- 📱 **Offline Mode** - Listen without an internet connection
+- 🔄 **Sync Across Devices** - Seamless experience across all your devices
+
+## 📱 App Screenshots
+
+<div align="center" style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; margin: 20px 0;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 0 auto; max-width: 900px;">
+    <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0160.PNG" alt="Home Screen" style="width: 160px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+    <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0161.PNG" alt="Search Screen" style="width: 160px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+    <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0162.PNG" alt="Playlist View" style="width: 160px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+    <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0163.PNG" alt="Now Playing" style="width: 160px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+    <img src="https://raw.githubusercontent.com/vivekkumar9798/DemoKMPProject/main/IMG_0164.PNG" alt="Profile" style="width: 160px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+  </div>
+  <p style="margin-top: 15px; color: #666; font-size: 0.9em;">✨ Hover over screenshots to zoom in</p>
 </div>
 
 ## ✨ Features
