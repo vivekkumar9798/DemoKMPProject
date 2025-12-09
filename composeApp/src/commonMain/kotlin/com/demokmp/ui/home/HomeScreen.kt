@@ -32,7 +32,7 @@ import com.demokmp.ui.home.content.SearchScreen
 import com.demokmp.ui.home.model.NavItem
 
 @Composable
-fun TecorbHome() {
+fun TechVivHome() {
     var selectedNav by remember { mutableStateOf(NavItem.Home) }
     
     Box(

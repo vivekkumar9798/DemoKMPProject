@@ -45,7 +45,7 @@ object AppColors {
 
 object AppStrings {
     // App Name
-    const val APP_NAME = "Tecorb Song"
+    const val APP_NAME = "TechViv Song"
     
     // Bottom Navigation
     const val NAV_HOME = "Home"
@@ -55,7 +55,7 @@ object AppStrings {
     const val NAV_PRO = "Pro"
     
     // Home Screen
-    const val PRO_LABEL = "Tecorb PRO"
+    const val PRO_LABEL = "TechViv PRO"
     const val PRO_OFFER = "Get 2 months at just ₹9!"
     const val CLAIM_NOW = "Claim Now"
     const val RECENTLY_PLAYED = "Recently Played"
@@ -68,7 +68,7 @@ object AppStrings {
     const val SEARCHING_FOR = "Searching for"
     
     // Pro Screen
-    const val PRO_SCREEN_TITLE = "Tecorb Song Pro"
+    const val PRO_SCREEN_TITLE = "TechViv Song Pro"
     const val PRO_SCREEN_SUBTITLE = "Unlimited Music, Zero Ads"
     const val START_FREE_TRIAL = "Start Free Trial"
     const val CHOOSE_YOUR_PLAN = "Choose Your Plan"

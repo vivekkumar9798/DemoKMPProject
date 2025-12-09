@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun TecorbTheme(content: @Composable () -> Unit) {
+fun TechVivTheme(content: @Composable () -> Unit) {
     val colors = lightColorScheme(
         primary = Color(0xFF00C29D),
         onPrimary = Color.White,
